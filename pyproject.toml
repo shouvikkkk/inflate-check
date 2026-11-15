@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "inflate-check"
+version = "0.1.0"
+description = "Detect constraint inflation in compacted agent summaries"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Shouvik Maji" }]
+keywords = ["ai-agents", "context-compaction", "claude-code", "static-analysis"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Software Development :: Testing",
+]
+
+[project.scripts]
+inflate-check = "inflatecheck.cli:main"
+
+[tool.setuptools]
+packages = ["inflatecheck"]
